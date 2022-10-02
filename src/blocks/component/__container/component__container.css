@@ -1,0 +1,12 @@
+.component__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3F3F4;
+  width: 100%;
+  min-height: 68px;
+  align-items: center;
+  border-radius: 16px;
+  margin: 0;
+  padding: 0 16px 0 24px;
+  box-sizing: border-box;
+}

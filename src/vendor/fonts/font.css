@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 400;
+  src: local('nekst'),
+    url('./nekst/Nekst-Regular.woff2') format('woff2'),
+    url('./nekst/Nekst-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 500;
+  src: local('nekst'),
+    url('./nekst/Nekst-Medium.woff2') format('woff2'),
+    url('./nekst/Nekst-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  src: local('nekst'),
+  url('./nekst/Nekst-Black.woff2') format('woff2'),
+  url('./nekst/Nekst-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('gilroy'),
+    url('./gilroy/Gilroy-Regular.woff2') format('woff2'),
+    url('./gilroy/Gilroy-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  src: local('gilroy'),
+    url('./gilroy/Gilroy-Medium.woff2') format('woff2'),
+    url('./gilroy/Gilroy-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 900;
+  src: local('gilroy'),
+    url('./gilroy/Gilroy-Black.woff2') format('woff2'),
+    url('./gilroy/Gilroy-Black.woff') format('woff');
+}

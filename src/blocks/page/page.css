@@ -1,0 +1,29 @@
+.page {
+  font-family: 'Nekst', 'Gilroy';
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 0 47px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 980px) {
+  .page {
+    max-width: calc(100% - (50px * 2));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    max-width: calc(100% - (19px * 2));
+    padding: 28px 0 36px;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  .page {
+    max-width: 100%;
+  }
+}
+

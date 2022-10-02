@@ -1,0 +1,10 @@
+.payment__input {
+  border: none;
+  outline: none;
+  background-color: rgb(0,0,0,0.0);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+  width: max-content;
+}

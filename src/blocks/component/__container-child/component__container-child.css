@@ -1,0 +1,4 @@
+.component__container-child {
+  display: flex;
+  justify-content: start;
+}

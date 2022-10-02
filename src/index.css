@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/font.css);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./blocks/page/page.css);
+@import url(./blocks/__gradient/page__gradient.css);
+@import url(./blocks/main/main.css);
+@import url(./blocks/title/title.css);
+@import url(./blocks/subTitle/subTitle.css);
+@import url(./blocks/main/__list/main__list.css);
+@import url(./blocks/main/__list-elem/main__list-elem.css);
+@import url(./blocks/component/component.css);
+@import url(./blocks/component/__container/component__container.css);
+@import url(./blocks/component/__container-child/component__container-child.css);
+@import url(./blocks/component/__range/component__range.css);
+@import url(./blocks/component/__span/component__span.css);
+@import url(./blocks/sliderComponent/slider-component.css);
+@import url(./blocks/sliderComponent/__input/slider-component__input.css);
+@import url(./blocks/component/__input/component__input.css);
+@import url(./blocks/component/__children/component__children.css);
+@import url(./blocks/payment/payment.css);
+@import url(./blocks/payment/__container/payment__container.css);
+@import url(./blocks/payment/__input-slider/payment__input-slider.css);
+@import url(./blocks/payment/__input/payment__input.css);
+

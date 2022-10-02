@@ -1,0 +1,23 @@
+.payment__input-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 50%;
+  background: #FF9514;
+  cursor: pointer;
+  border: none;
+}
+
+
+.payment__input-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FF9514;
+  cursor: pointer;
+  border: none;
+}

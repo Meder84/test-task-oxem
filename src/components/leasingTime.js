@@ -1,53 +1,30 @@
-function Ranges(props) {
-  const onChange = ({ target: t }) => {
-    const index = +t.dataset.index;
-    const value = +t.value;
-    const values = props.values.map((n, i) => i === index ? value : n);
+import React, { useState } from "react";
+import Component from "./Component";
 
-    if (props.max >= values.reduce((acc, n) => acc + n, 0)) {
-      props.onChange(values);
-    }
-  };
+function LeasingTime ({onChange}) {
+  const [value, setValue] = useState(60);
+  const min = 1;
+  const max = 60;
+
+  const handleChange = (evt) => {
+    const value = Math.max(min, Math.min(max, Number(evt.target.value)));
+    const onChange = value;
+    setValue(value)
+  }
 
   return (
-    <div>
-      {props.values.map((n, i) => (
-        <div>
-          <input
-            type="range"
-            data-index={i}
-            max={props.max}
-            value={n}
-            onChange={onChange}
-          />
-          {n}
-        </div>
-      ))}
+    <div className="leasingTime">
+      <Component
+        subTitle="Срок лизинга"
+        value={value}
+        handleChange={handleChange}
+        min={1}
+        max={60}
+        step={1}
+        textSpan='мес.'
+      />
     </div>
   );
 }
 
-function App() {
-  const [ ranges, setRanges ] = React.useState([
-    { values: [ 5, 15, 25, 35 ], max: 100 },
-    { values: [ 1, 2, 3 ], max: 20 },
-    { values: [ 0, 0, 0, 50 ], max: 50 },
-  ]);
-
-  const onChange = (index, values) =>
-    setRanges(ranges.map((n, i) => i === index ? { ...n, values } : n));
-
-  return (
-     <div>
-       {ranges.map((n, i) => (
-         <div className="ranges">
-           <Ranges {...n} onChange={values => onChange(i, values)} />
-           <div>SUM: {n.values.reduce((acc, n) => acc + n, 0)}</div>
-           <div>MAX SUM: {n.max}</div>
-         </div>
-       ))}
-    </div>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+export default LeasingTime;

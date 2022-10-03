@@ -1,4 +1,4 @@
-.payment__input-slider {
+.initial__input-slider {
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -11,7 +11,7 @@
 }
 
 
-.payment__input-slider::-webkit-slider-thumb {
+.initial__input-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;

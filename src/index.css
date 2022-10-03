@@ -3,22 +3,38 @@
 
 @import url(./blocks/page/page.css);
 @import url(./blocks/__gradient/page__gradient.css);
-@import url(./blocks/main/main.css);
 @import url(./blocks/title/title.css);
 @import url(./blocks/subTitle/subTitle.css);
+
+@import url(./blocks/main/main.css);
 @import url(./blocks/main/__list/main__list.css);
 @import url(./blocks/main/__list-elem/main__list-elem.css);
+
 @import url(./blocks/component/component.css);
 @import url(./blocks/component/__container/component__container.css);
 @import url(./blocks/component/__container-child/component__container-child.css);
 @import url(./blocks/component/__range/component__range.css);
 @import url(./blocks/component/__span/component__span.css);
-@import url(./blocks/sliderComponent/slider-component.css);
-@import url(./blocks/sliderComponent/__input/slider-component__input.css);
 @import url(./blocks/component/__input/component__input.css);
 @import url(./blocks/component/__children/component__children.css);
-@import url(./blocks/payment/payment.css);
-@import url(./blocks/payment/__container/payment__container.css);
-@import url(./blocks/payment/__input-slider/payment__input-slider.css);
-@import url(./blocks/payment/__input/payment__input.css);
+
+@import url(./blocks/sliderComponent/slider-component.css);
+@import url(./blocks/sliderComponent/__input/slider-component__input.css);
+
+@import url(./blocks/initial/initial.css);
+@import url(./blocks/initial/__container/initial__container.css);
+@import url(./blocks/initial/__input-slider/initial__input-slider.css);
+@import url(./blocks/initial/__input/initial__input.css);
+@import url(./blocks/initial/__input-percent/initial__input-percent.css);
+@import url(./blocks/initial/__container-child/initial__container-child.css);
+@import url(./blocks/initial/__span/initial__span.css);
+
+@import url(./blocks/leasingTime/leasingTime.css);
+
+@import url(./blocks/generic-component/generic-component.css);
+@import url(./blocks/generic-component/__container/generic-component__container.css);
+@import url(./blocks/generic-component/__input/generic-component__input.css);
+
+
+
 

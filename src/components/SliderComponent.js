@@ -7,7 +7,7 @@ function SliderComponent({value, handleChange, min, max, step, sliderComponentIn
       <input
         className={`slider-component__input ${sliderComponentInput}`}
         type="range"
-        defaultValue={value}
+        value={value}
         onChange={handleChange}
         min={min}
         max={max}

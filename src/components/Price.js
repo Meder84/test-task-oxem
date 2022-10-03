@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Component from "./Component";
-import SliderComponent from "./SliderComponent";
 
 function Price () {
   const [value, setValue] = useState(3300000);
@@ -21,6 +20,7 @@ function Price () {
         min={1000000}
         max={6000000}
         step={1}
+        textSpan='₽'
       />
     </div>
   );

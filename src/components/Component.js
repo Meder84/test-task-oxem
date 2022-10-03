@@ -1,25 +1,25 @@
-import React, { Children } from "react";
+import React from "react";
 import SliderComponent from "./SliderComponent";
 
 function Component ({
-  subTitle, value, defaultValue, handleChange, min, max, step,
-  componentContainer, sliderComponentInput, Children, childrenClass
+  subTitle, value, handleChange, min, max, step, textSpan,
+  componentContainer, sliderComponentInput, children, componentContainerChild
 }) {
 
   return (
     <div className="component">
       <h2 className="subTitle">{subTitle}</h2>
       <div className={`component__container ${componentContainer}`}>
-        <div className="component__container-child">
+        <div className={`component__container-child ${componentContainerChild}`}>
           <input
             className="component__input"
             value={value}
             type="number"
             onChange={handleChange}
           />
-          <span className="component__span">₽</span>
+          <span className="component__span">{textSpan}</span>
         </div>
-        <div className={`component__children ${childrenClass}`}>{Children}</div>
+        {children}
       </div>
       <SliderComponent
         value={value}

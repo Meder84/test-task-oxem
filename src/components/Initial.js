@@ -1,25 +1,12 @@
-import { useState } from "react";
 import Component from "./Component";
-import { useContext } from 'react';
-import { Context } from "../contexts/context";
 
-function Initial ({onChange}) {
-  const [value, setValue] = useState(420000);
-  const [percent, setPersent] = useState(13);
-  // const contextValue = useContext(Context);
+function Initial ({value, percent, onChangeComponent,
+  onChangeSlider, onChangePercent
+}) {
 
-  const min = 323076;
-  const max = 3230759;
-
-  const handleChange = (evt) => {
-
-    const value = Math.max(min, Math.min(max, Number(evt.target.value)));
-    const percent = Math.round(value * 100 / max);
-    const onChange = value
-
-    // contextValue.setValue(value);
-    setValue(value)
-    setPersent(percent)
+  const handleChangePercent = (evt) => {
+    const value = evt.target.value
+    onChangePercent (value)
   }
 
   return (
@@ -27,9 +14,10 @@ function Initial ({onChange}) {
       <Component
         subTitle="Первоначальный взнос"
         value={value}
-        handleChange={handleChange}
-        min={193845}
-        max={1938453}
+        onChangeComponent={onChangeComponent}
+        onChangeSlider={onChangeSlider}
+        min={1}
+        max={100}
         step={1}
         componentContainer="initial__container"
         componentContainerChild="initial__container-child"
@@ -44,7 +32,7 @@ function Initial ({onChange}) {
             max={100}
             step={1}
             value={percent}
-            onChange={handleChange}
+            onChange={handleChangePercent}
           />
           %
         </span>

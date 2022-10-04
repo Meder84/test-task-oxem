@@ -7,9 +7,9 @@ function LeasingTime ({onChange}) {
   const max = 60;
 
   const handleChange = (evt) => {
-    const value = Math.max(min, Math.min(max, Number(evt.target.value)));
-    const onChange = value;
-    setValue(value)
+    const LeasingTimevalue = Math.max(min, Math.min(max, Number(evt)));
+    onChange(LeasingTimevalue)
+    setValue(LeasingTimevalue)
   }
 
   return (
@@ -17,7 +17,8 @@ function LeasingTime ({onChange}) {
       <Component
         subTitle="Срок лизинга"
         value={value}
-        handleChange={handleChange}
+        onChangeComponent={handleChange}
+        onChangeSlider={handleChange}
         min={1}
         max={60}
         step={1}

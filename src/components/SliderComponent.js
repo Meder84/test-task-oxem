@@ -1,13 +1,17 @@
 import React from "react";
 
-function SliderComponent({value, handleChange, min, max, step, sliderComponentInput}) {
+function SliderComponent({onChangeSlider, min, max, step, sliderComponentInput}) {
+
+  const handleChange = (evt) => {
+    onChangeSlider(evt.target.value)
+  }
 
   return (
     <div className="slider-component">
       <input
         className={`slider-component__input ${sliderComponentInput}`}
         type="range"
-        value={value}
+        // value={value}
         onChange={handleChange}
         min={min}
         max={max}

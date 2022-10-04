@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Component from "./Component";
 
-function Price () {
-  const [value, setValue] = useState(3300000);
-  const min = 1000000;
-  const max = 6000000;
+function Price ({onchange}) {
+  const [value, setValue] = useState(100);
+  const min = 10;
+  const max = 100;
 
   const handleChange = (evt) => {
-    const value = Math.max(min, Math.min(max, Number(evt.target.value)));
+    const value = Math.max(min, Math.min(max, Number(evt)));
+    onchange(value)
     setValue(value)
   }
 
@@ -16,9 +17,10 @@ function Price () {
       <Component
         subTitle="Стоимость автомобиля"
         value={value}
-        handleChange={handleChange}
-        min={1000000}
-        max={6000000}
+        onChangeComponent={handleChange}
+        onChangeSlider={handleChange}
+        min={10}
+        max={100}
         step={1}
         textSpan='₽'
       />

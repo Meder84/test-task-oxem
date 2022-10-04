@@ -2,9 +2,14 @@ import React from "react";
 import SliderComponent from "./SliderComponent";
 
 function Component ({
-  subTitle, value, handleChange, min, max, step, textSpan,
+  subTitle, value, onChangeSlider, min, max, step, textSpan, onChangeComponent,
   componentContainer, sliderComponentInput, children, componentContainerChild
 }) {
+
+  const handleChange = (evt) => {
+    const value = evt.target.value
+    onChangeComponent(value)
+  }
 
   return (
     <div className="component">
@@ -12,7 +17,7 @@ function Component ({
       <div className={`component__container ${componentContainer}`}>
         <div className={`component__container-child ${componentContainerChild}`}>
           <input
-            className="component__input"
+            className="component__input opacity"
             value={value}
             type="number"
             onChange={handleChange}
@@ -22,8 +27,7 @@ function Component ({
         {children}
       </div>
       <SliderComponent
-        value={value}
-        handleChange={handleChange}
+        onChangeSlider={onChangeSlider}
         min={min}
         max={max}
         step={step}

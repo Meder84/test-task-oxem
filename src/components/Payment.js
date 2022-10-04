@@ -1,12 +1,12 @@
 import React from "react";
 import GenericComponent from "./GenericComponent";
 
-function LeasingContract ({onChange, value}) {
+function Payment ({onChange, value}) {
 
   return (
-    <div className="leasing-contract">
+    <div className="payment">
       <GenericComponent
-        subTitle='Сумма договора лизинга'
+        subTitle='Ежемесячный платеж от'
         value={value}
         onChange={onChange}
       />
@@ -14,4 +14,4 @@ function LeasingContract ({onChange, value}) {
   );
 }
 
-export default LeasingContract;
+export default Payment;

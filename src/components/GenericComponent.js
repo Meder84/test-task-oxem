@@ -1,8 +1,13 @@
 import React from "react";
 
 function GenericComponent ({
-  subTitle, value, handleChange, textSpan
+  subTitle, onChange, textSpan, value
 }) {
+
+  const handleChange = (evt) => {
+    const value = evt.target.value
+    onChange(value)
+  }
 
   return (
     <div className="generic-component">

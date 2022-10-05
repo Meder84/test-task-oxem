@@ -1,6 +1,6 @@
 .initial__container-child {
  display: flex;
  justify-content: start;
- max-width: 145px;
+ max-width: 150px;
  width: fit-content;
 }

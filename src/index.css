@@ -2,13 +2,15 @@
 @import url(./vendor/fonts/font.css);
 
 @import url(./blocks/page/page.css);
-@import url(./blocks/__gradient/page__gradient.css);
+@import url(./blocks/page/__gradient/page__gradient.css);
 @import url(./blocks/title/title.css);
 @import url(./blocks/subTitle/subTitle.css);
 
 @import url(./blocks/main/main.css);
-@import url(./blocks/main/__list/main__list.css);
+@import url(./blocks/main/__list1/main__list1.css);
+@import url(./blocks/main/__list2/main__list2.css);
 @import url(./blocks/main/__list-elem/main__list-elem.css);
+@import url(./blocks/main/__error-text/main__error-text.css);
 
 @import url(./blocks/component/component.css);
 @import url(./blocks/component/__container/component__container.css);
@@ -34,10 +36,18 @@
 @import url(./blocks/generic-component/generic-component.css);
 @import url(./blocks/generic-component/__container/generic-component__container.css);
 @import url(./blocks/generic-component/__input/generic-component__input.css);
+@import url(./blocks/generic-component/__span/generic-component__span.css);
+@import url(./blocks/generic-component/__subTitle/generic-component__subTitle.css);
 
 @import url(./blocks/payment/payment.css);
-@import url(./blocks/button/button.css);
+@import url(./blocks/payment/__span/payment__span.css);
+
 @import url(./blocks/opacity/opacity.css);
+@import url(./blocks/preloader/preloader.css);
+
+@import url(./blocks/button/button.css);
+@import url(./blocks/button/__disabled/button__disabled.css);
+
 
 
 

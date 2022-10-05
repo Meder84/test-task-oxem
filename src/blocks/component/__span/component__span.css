@@ -4,3 +4,11 @@
   line-height: 36px;
   color: #575757;
 }
+
+@media screen and (max-width: 400px) {
+  .component__span {
+    font-size: 22px;
+    line-height: 20px;
+    color: #333E48;
+  }
+}

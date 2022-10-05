@@ -19,13 +19,15 @@ function Component ({
           <input
             className="component__input opacity"
             value={value}
+            min={min}
+            max={max}
             type="number"
             onChange={handleChange}
           />
           <span className="component__span">{textSpan}</span>
         </div>
         {children}
-      </div>
+
       <SliderComponent
         onChangeSlider={onChangeSlider}
         min={min}
@@ -33,6 +35,7 @@ function Component ({
         step={step}
         sliderComponentInput={sliderComponentInput}
       />
+      </div>
     </div>
   );
 }

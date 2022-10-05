@@ -1,12 +1,18 @@
+import Preloader from "./Preloader";
 
-const Button = () => {
+const Button = ({disabled, textButton}) => {
 
   return (
     <button
-      className="button opacity"
+      className={
+        !disabled
+        ? "button opacity"
+        : "button__disabled"
+      }
       type="submit"
+      disabled={disabled}
     >
-      Оставить заявку
+     {!disabled ? textButton : <Preloader />}
     </button>
   )
 }

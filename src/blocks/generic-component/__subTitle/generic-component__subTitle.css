@@ -1,17 +1,22 @@
-.subTitle {
+.generic-component__subTitle {
   margin: 0;
   padding: 0;
   font-family: 'Gilroy';
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   color: #575757;
 }
 
+@media screen and (max-width: 1024px) {
+  .generic-component__subTitle {
+    color: #333333;
+  }
+}
+
 @media screen and (max-width: 400px) {
-  .subTitle {
+  .generic-component__subTitle {
     font-size: 14px;
     line-height: 19px;
-    color: #333E48;
   }
 }

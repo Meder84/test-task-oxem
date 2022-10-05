@@ -9,6 +9,7 @@ function Payment ({onChange, value}) {
         subTitle='Ежемесячный платеж от'
         value={value}
         onChange={onChange}
+        genericComponentSpan="payment__span"
       />
     </div>
   );

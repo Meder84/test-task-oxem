@@ -1,0 +1,30 @@
+.main__list2 {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 54px 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(81px, auto);
+  column-gap: 32px;
+  row-gap: 44px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__list2 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 37px 0 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main__list2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__list2 {
+    padding: 16px 0 0;
+    row-gap: 30px;
+  }
+}

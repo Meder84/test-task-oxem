@@ -6,3 +6,9 @@
   height: 81px;
   width: 100%;
 }
+
+@media screen and (max-width: 400px) {
+  .generic-component {
+    height: 41px;
+  }
+}

@@ -1,0 +1,15 @@
+.button__disabled {
+  display: block;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  background-color: #FFD5A1;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+}

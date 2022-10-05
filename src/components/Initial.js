@@ -1,7 +1,7 @@
 import Component from "./Component";
 
 function Initial ({value, percent, onChangeComponent,
-  onChangeSlider, onChangePercent
+  onChangeSlider, onChangePercent, min, max
 }) {
 
   const handleChangePercent = (evt) => {
@@ -16,12 +16,12 @@ function Initial ({value, percent, onChangeComponent,
         value={value}
         onChangeComponent={onChangeComponent}
         onChangeSlider={onChangeSlider}
-        min={1}
-        max={100}
+        min={min}
+        max={max}
         step={1}
         componentContainer="initial__container"
         componentContainerChild="initial__container-child"
-        sliderComponentInput="initial__input-slider"
+        // sliderComponentInput="initial__input-slider"
         textSpan='₽'
       >
         <span className="initial__span">

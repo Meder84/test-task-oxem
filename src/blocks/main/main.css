@@ -1,4 +1,23 @@
 .main {
   margin: 0;
   padding: 213px 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 100px 0 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 64px 0 156px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main {
+    padding: 44px 0 64px;
+  }
 }

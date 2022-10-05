@@ -1,6 +1,6 @@
 .generic-component__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
   min-height: 68px;
   align-items: center;

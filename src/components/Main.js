@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Context } from "../contexts/context";
+import { requestAuth } from "../utils/auth";
 import Button from "./button";
 import Initial from "./Initial";
 import LeasingContract from "./LeasingContract";
 import LeasingTime from "./LeasingTime";
 import Payment from "./Payment";
 import Price from "./Price";
+import * as auth from '../utils/auth';
+import Preloader from "./Preloader";
+import { DEFAULT_ERROR } from '../utils/consts';
 
 function Main(props) {
   const [statePrice, setStatePrice] = useState(3300000);
   const [stateInit, setStateInit] = useState(420000);
   const [percent, setPersent] = useState(13);
   const [stateLeasingTime, setStateLeasingTime] = useState(40);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
+  const [disabled, setDisabled] = useState(false)
 
   const dataTotal = (statePrice - stateInit) * (3.5 / 12 * stateLeasingTime)
   const monthPay = (statePrice - stateInit) * ((0.035 * Math.pow((1 + 0.035), stateLeasingTime)) / (Math.pow((1 + 0.035), stateLeasingTime) - 1));
@@ -19,16 +25,18 @@ function Main(props) {
   const [totalLeasingContract, setTotalLeasingContract] = useState(dataTotal);
   const [totalPayment, setTotalPayment] = useState(monthPay);
 
+  let min = (statePrice / 100 * 10);
+  let max = (statePrice / 100 * 60);;
+
   useEffect(()=> {
     calculateTotal();
     calculateTotalPayment();
   }, [statePrice, stateInit, stateLeasingTime, totalLeasingContract])
 
-  let min = (statePrice / 100 * 10);
-  let max = (statePrice / 100 * 60);;
-
   const handleChangePrice = (value) => {
+    const initialPercent = Math.round(stateInit * 100 / statePrice);
     setStatePrice(value)
+    setPersent(initialPercent)
   }
 
   const handleChangeLeasing = (value) => {
@@ -36,25 +44,42 @@ function Main(props) {
   }
 
   const handleChangeInit = (value) => {
-    const initialValue = Math.max(min, Math.min(max, Number(value)));
+    const initialValue = Math.round(value)
     const initialPercent = Math.round(value * 100 / statePrice);
-    const resultInitialPercent = Math.round(Math.max(min, Math.min(max, Number(initialPercent))));
 
     setStateInit(initialValue)
-    setPersent(resultInitialPercent)
+    // setStateInit(test)
+    setPersent(initialPercent)
     setStateInit(value);
   }
 
   function calculateTotal() {
-    setTotalLeasingContract(dataTotal);
+    setTotalLeasingContract(Math.round(dataTotal));
   }
 
   function calculateTotalPayment() {
-    setTotalPayment(monthPay)
+    setTotalPayment (Math.round(monthPay))
   }
 
-  function handleSubmit(evt) {
+  const handleSubmit = (evt) => {
+    setDisabled(true)
+    setIsLoading(true)
     evt.preventDefault();
+    handleSubmitForm()
+  };
+
+  function handleSubmitForm(data) {
+    auth.requestAuth(data)
+    .then((data) => {
+      console.log(data)
+      if (!data) return;
+      setTimeout(() => {
+        setIsLoading(false)
+        setDisabled(false)
+      }, 1000);
+    })
+    .catch(() =>  setMessage(DEFAULT_ERROR))
+    .finally(() => setIsLoading(false) )
   }
 
   return (
@@ -64,7 +89,7 @@ function Main(props) {
         onSubmit={handleSubmit}
       >
         <h1 className="title">Рассчитайте стоимость автомобиля в лизинг</h1>
-        <ul className="main__list">
+        <ul className="main__list1">
           <li className="main__list-elem">
             <Price
               onchange={handleChangePrice}
@@ -75,6 +100,8 @@ function Main(props) {
               onChangeComponent={handleChangeInit}
               onChangeSlider={handleChangeInit}
               onChangePercent={handleChangeInit}
+              min={min}
+              max={max}
               value={stateInit}
               percent={percent}
             />
@@ -85,6 +112,8 @@ function Main(props) {
               onChange={handleChangeLeasing}
             />
           </li>
+        </ul>
+        <ul className="main__list2">
           <li className="main__list-elem">
             <LeasingContract
               value={totalLeasingContract}
@@ -97,7 +126,11 @@ function Main(props) {
           </li>
           <li className="main__list-elem">
             <Button
+              disabled={disabled}
+              textButton="Оставить заявку"
+              onClick={handleSubmit}
             />
+            <p className="main__error-text">{message}</p>
           </li>
         </ul>
       </form>

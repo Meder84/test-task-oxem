@@ -3,6 +3,12 @@
   position: relative;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 119px;
+  min-height: 109px;
   width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .component {
+    min-height: 96px;
+  }
 }

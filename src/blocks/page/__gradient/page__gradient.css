@@ -1,0 +1,42 @@
+.page__gradient {
+  background: linear-gradient(
+  90deg,
+  #F6F6F6 0 85px,
+  #fff 0
+  );
+  background-size: 115px;
+}
+
+@media screen and (max-width: 1024px) {
+  .page__gradient {
+    background: linear-gradient(
+    90deg,
+    #F6F6F6 0 128px,
+    #fff 0
+    );
+    background-size: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page__gradient {
+    background: linear-gradient(
+    90deg,
+    #F6F6F6 0 150px,
+    #fff 0
+    );
+    background-size: 182px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .page__gradient {
+    background: linear-gradient(
+    90deg,
+    #F6F6F6 0 132px,
+    #fff 0
+    );
+    background-size: 148px;
+  }
+}
+

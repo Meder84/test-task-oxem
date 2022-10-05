@@ -4,6 +4,27 @@
   font-weight: 900;
   font-size: 54px;
   line-height: 49px;
-  width:753px;
+  width: 753px;
   min-height: 98px;
+  color: #111111;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    font-size: 45px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    font-size: 34px;
+    line-height: 31px;
+  }
 }

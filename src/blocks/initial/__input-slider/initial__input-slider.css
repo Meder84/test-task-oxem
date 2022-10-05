@@ -1,5 +1,5 @@
 .initial__input-slider {
-  width: 100%;
+  width: 90%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -14,8 +14,8 @@
 .initial__input-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #FF9514;
   cursor: pointer;

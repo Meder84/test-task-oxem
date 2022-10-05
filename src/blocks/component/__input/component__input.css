@@ -17,3 +17,11 @@
 .component__input:focus {
   background-color: white;
 }
+
+@media screen and (max-width: 400px) {
+  .component__input {
+    font-size: 22px;
+    line-height: 20px;
+    color: #333E48;
+  }
+}

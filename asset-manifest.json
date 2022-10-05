@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/test-task-oxem/static/css/main.2f71b6ab.css",
+    "main.js": "/test-task-oxem/static/js/main.c92ac2bd.js",
+    "static/media/Nekst-Regular.woff": "/test-task-oxem/static/media/Nekst-Regular.4d8de93b27c5bd7e1f9b.woff",
+    "static/media/Nekst-Black.woff": "/test-task-oxem/static/media/Nekst-Black.f0e2921efcf1112b1749.woff",
+    "static/media/Nekst-Medium.woff": "/test-task-oxem/static/media/Nekst-Medium.35ba2ca64c36e7a5877a.woff",
+    "static/media/Nekst-Regular.woff2": "/test-task-oxem/static/media/Nekst-Regular.9e71aafe8ea6d32f9b41.woff2",
+    "static/media/Nekst-Black.woff2": "/test-task-oxem/static/media/Nekst-Black.44814bfd3ba4a266cf1d.woff2",
+    "static/media/Nekst-Medium.woff2": "/test-task-oxem/static/media/Nekst-Medium.58c6c33bedd14434d308.woff2",
+    "static/media/Gilroy-Medium.woff": "/test-task-oxem/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
+    "static/media/Gilroy-Black.woff": "/test-task-oxem/static/media/Gilroy-Black.a9df216db6a98486e2d4.woff",
+    "static/media/Gilroy-Regular.woff": "/test-task-oxem/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/Gilroy-Medium.woff2": "/test-task-oxem/static/media/Gilroy-Medium.acd4e613de34a826c191.woff2",
+    "static/media/Gilroy-Black.woff2": "/test-task-oxem/static/media/Gilroy-Black.ae06da6f25281591aa09.woff2",
+    "static/media/Gilroy-Regular.woff2": "/test-task-oxem/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "index.html": "/test-task-oxem/index.html",
+    "main.2f71b6ab.css.map": "/test-task-oxem/static/css/main.2f71b6ab.css.map",
+    "main.c92ac2bd.js.map": "/test-task-oxem/static/js/main.c92ac2bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f71b6ab.css",
+    "static/js/main.c92ac2bd.js"
+  ]
+}

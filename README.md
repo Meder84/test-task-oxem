@@ -1,5 +1,5 @@
 # Проект: "Oxem"
-* [Ссылка на проект]()
+* [Ссылка на проект](https://meder84.github.io/test-task-oxem/)
 * [Ссылка на анимацию](https://github.com/Meder84/Meder84/blob/main/gif/Oxem.gif)
 
 ### Обзор
